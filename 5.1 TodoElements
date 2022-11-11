@@ -1,0 +1,49 @@
+1. HTML Input Element
+
+1.1 Placeholder
+
+Placeholder is the text that appears in the HTML inputelement when no value is set. We can specify it using the HTML attribute  placeholder.
+
+<input type="text" placeholder="Enter your name" />
+
+
+2. JavaScript Built-in Functions
+
+2.1 alert()
+
+The alert() function displays an alert box with a specified message and an OK button.
+alert("Enter Valid Text");
+
+
+3. DOM Properties
+3.1 Checked:-The checked property sets or returns the checked status of an HTML checkbox input element as a boolean value.
+
+let checkboxElement = document.getElementById(checkboxId);
+checkboxElement.checked = true;
+
+4. DOM Manipulations
+4.1 The removeChild() Method
+
+The removeChild() method removes an HTML child element of the specified HTML parent element from the DOM and returns the removed HTML child element.
+function onDeleteTodo(todoId) {
+  let todoElement = document.getElementById(todoId);
+
+  todoItemsContainer.removeChild(todoElement);
+}
+
+
+4.2 The classList.toggle() Method
+
+The classList.toggle()method is used to toggle between adding and removing a class name from an HTML element.
+
+function onTodoStatusChange(checkboxId, labelId) {
+  let checkboxElement = document.getElementById(checkboxId);
+  let labelElement = document.getElementById(labelId);
+
+  labelElement.classList.toggle('checked');
+}
+
+
+We can replace classList.add() and classList.remove() methods with classList.toggle()method.
+
+
