@@ -1,0 +1,138 @@
+1. HTML Input Element
+1.1 Checkbox
+
+The HTML input
+ element can be used to create a Checkbox. To define a Checkbox, you need to specify the HTML type
+ attribute with the value checkbox
+ for an HTML input
+ element.
+
+<input type="checkbox" />
+
+1.2 The HTML Label Element
+
+The HTML label
+ element defines a Label 
+ 
+ <label for="myCheckbox">Graduated</label> 
+ 
+ 1.2.1 The HTML for Attribute
+
+The HTML for attribute associates the HTML label element with an HTML input element.
+
+<input type="checkbox" id="myCheckbox" />
+<label for="myCheckbox">Graduated</label> 
+
+2. DOM Manipulations
+2.1 The htmlFor Property
+
+We can use htmlFor property to add HTML for attribute to the HTML label element.
+
+let labelElement = document.createElement("label");
+labelElement.htmlFor = "myCheckbox";
+
+
+
+2.2 The setAttribute() Method
+
+We can use setAttribute()
+ method to set any HTML attribute name and its corresponding value. If the attribute already exists,
+ the value is updated. Otherwise, a new attribute is added with the specified name and value.
+
+Syntax: Element.setAttribute(name, value);
+
+let labelElement = document.createElement("label");
+labelElement.setAttribute("for", "myCheckbox");
+
+3. Loops
+
+Loops allow us to execute a block of code several times.
+
+    for...of Loop
+    for...in Loop
+    for Loop
+    while Loop and many more.
+
+3.1 The for...of Loop
+
+let myArray = [1, 2, 3, 4];
+
+for (let eachItem of myArray) {
+   console.log(eachItem);
+}
+
+
+
+
+4. CSS Box Properties
+4.1 Border
+
+The CSS border
+ property is a shorthand property for:
+
+    border-width
+    border-style (required)
+    border-color
+
+For example,.button {
+  border-style: dashed;
+  border-width: 2px;
+  border-color: #e4e7eb;
+}
+
+Instead of writing the CSS properties border-style, border-width and border-color
+individually, we can apply these properties at once with a single CSS property called border.
+
+Syntax: border: border-width border-style border-color
+
+.button {
+  border: 2px dashed #e4e7eb;
+}
+
+
+To specify the border on one of the four sides of an HTML element, you can use the below CSS properties.
+
+    border-top
+    border-bottom
+    border-right
+    border-left
+
+.button {
+  border-top: 1px dotted #e4e7eb;
+}
+
+If the border is not required, we can apply the noneas value to the CSS borderproperty.
+
+.button {
+  border: none;
+}
+
+For example, if the border property is not required on the top side of an HTML element. You can use,
+.button {
+  border-top: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
