@@ -1,0 +1,71 @@
+Todos Application | Part 4 | Cheat Sheet
+1. JavaScript Object Notation (JSON)
+
+JSON is a data representation format used for:
+
+    Storing data (Client/Server)
+    Exchanging data between Client and Server
+
+1.1 Supported Types
+
+    Number
+    String
+    Boolean
+    Array
+    Object
+    Null
+
+1.2 JS Object vs JSON Object
+
+In JSON, all keys in an object must be enclosed with double-quotes. While in JS, this is not necessary.
+
+JS:let profile = {
+  name: "Rahul",
+  age: 29,
+  designation: "Web Developer"
+};
+
+JSON:
+let profile = {
+  "name": "Rahul",
+  "age": 29,
+  "designation": "Web Developer"
+};
+
+
+
+
+1.3 JSON Methods
+1.3.1 JSON.stringify()
+
+It converts the given value into JSON string.
+
+Syntax: JSON.stringify( value )
+1.3.2 JSON.parse()
+
+It parses a JSON string and returns a JS object.
+
+Syntax: JSON.parse( string )
+
+
+let profile = {
+  name: "Rahul",
+  age: 29,
+  designation: "Web Developer"
+};
+let stringifiedProfile = JSON.stringify(profile);
+
+console.log(stringifiedProfile);
+
+console.log(typeof(stringifiedProfile));
+
+
+
+
+
+
+
+
+
+
+
