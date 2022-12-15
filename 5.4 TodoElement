@@ -1,0 +1,109 @@
+1. Array Methods 
+
+Method	                                                      Functionality
+
+1.includes, indexOf, lastIndexOf, find, findIndex()	         Finding Elements
+
+2.push, unshift, splice	                                     Adding Elements
+
+3.pop, shift, splice	                                       Removing Elements
+
+4.concat, slice	                                             Combining & Slicing Arrays
+
+5.join	                                                     Joining Array Elements
+
+6.sort	                                                     Sorting Array Elements
+
+
+1.1 splice()
+
+
+The splice()method changes the contents of an array.
+
+Using splice()method, we can
+1.Remove existing items
+2.Replace existing items
+3.Add new items
+
+1.1.1 Removing existing items
+
+Syntax: arr.splice(Start, Delete Count)
+
+    Start: Starting Index
+    Delete Count: Number of items to be removed, starting from the given index 
+    
+ EXAMPLE-1:-   
+    
+let myArray = [5, "six", 2, 8.2];
+myArray.splice(2, 2);
+
+console.log(myArray);  // [5, "six"]
+
+let deletedItems = myArray.splice(2, 2);
+
+console.log(deletedItems);  // [2, 8.2]
+    
+    
+    
+The splice()method returns an array containing the deleted items.
+
+1.1.2 Adding new items
+
+Syntax: arr.splice(Start, Delete Count, Item1, Item2 ... )
+
+Here the Item1, Item2 ...are the items to be added, starting from the given index.
+
+  
+ EXAMPLE-2   
+    
+let myArray = [5, "six", 2, 8.2];
+myArray.splice(2, 0, "one", false);
+
+console.log(myArray);  // [5, "six", "one", false, 2, 8.2]   
+    
+1.1.3 Replacing existing items
+
+Syntax: arr.splice(Start, Delete Count, Item1, Item2 ... )
+
+    
+ let myArray = [5, "six", 2, 8.2];
+myArray.splice(2, 1, true);
+
+console.log(myArray);  // [5, "six", true, 8.2]   
+    
+1.2 findIndex()
+
+The findIndex()method returns the first item's index that satisfies the provided testing function. If no item is found, it returns -1.
+
+Syntax: arr.findIndex(Testing Function)
+
+Here Testing Function is a function to execute on each value in the array.
+   
+let myArray = [5, 12, 8, 130, 44];
+let itemIndex = myArray.findIndex(function(eachItem) {
+  console.log(eachItem);
+});
+   
+In the above code snippet, the below function is a Testing Function.
+
+function(eachItem) {
+  console.log(eachItem);
+}
+
+Try out the splice()
+ and findIndex()
+ methods in the below Code Playground.
+    
+Example-3 
+
+
+let myArray = [5, 12, 8, 130, 44];
+let itemIndex = myArray.findIndex(function (eachItem) {
+    if (eachItem === 130) {
+        return true;
+    } else {
+        return false;
+    }
+});
+console.log(itemIndex);
+
