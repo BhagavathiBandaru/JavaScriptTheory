@@ -1,0 +1,14 @@
+Todos Application
+
+
+1. Local Storage
+1.1 The removeItem() Method
+
+The removeItem()
+ method removes the specified storage object item based on the key.
+
+Syntax: localStorage.removeItem(key)
+
+Key - Name of the key to be removed
+
+localStorage.removeItem("todoList");
